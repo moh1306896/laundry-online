@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pemesanan</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+  <nav class="bg-blue-700 text-white p-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-3xl font-bold text-white hover:text-gray-300 transition-colors duration-300">LaundryOnline</a>
+      <ul class="flex space-x-8 text-lg">
+        <li><a href="order.html" class="hover:text-gray-300 transition-colors duration-300">Pemesanan</a></li>
+        <li><a href="about.html" class="hover:text-gray-300 transition-colors duration-300">Tentang</a></li>
+        <li><a href="contact.html" class="hover:text-gray-300 transition-colors duration-300">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mx-auto my-8 p-6 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-bold text-center mb-6">Form Pemesanan Laundry</h2>
+    <form action="/submit-pemesanan" method="POST">
+      <div class="mb-4">
+        <label for="layanan" class="block text-sm font-medium">Layanan</label>
+        <select id="layanan" name="layanan" class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md" required>
+          <option value="cuci-kering">Cuci Kering</option>
+          <option value="setrika">Setrika</option>
+          <option value="cuci-lengkap">Cuci Lengkap</option>
+        </select>
+      </div>
+      <div class="mb-4">
+        <label for="berat" class="block text-sm font-medium">Berat (kg)</label>
+        <input type="number" id="berat" name="berat" class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md" required>
+      </div>
+      <button type="submit" class="w-full bg-blue-700 text-white py-2 rounded-md hover:bg-blue-800">Pesan</button>
+    </form>
+  </div>
+</body>
+
+</html>
